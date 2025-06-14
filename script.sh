@@ -1,7 +1,7 @@
 #!/bin/bash
-#NETWORK-TWEAKER-A.I.O.
-#@CYBERNOVA1
-#@ITACHIUCHIHASENSEI
+#MRJ Tech Lab / MRJ Kingdom
+#@mrjbadshah
+
 clear
 #=========================================================================================================================
 
