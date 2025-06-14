@@ -64,13 +64,13 @@ mkdir /etc/funny/cache/vmess-ws-orbit
 mkdir /etc/funny/cache/vmess-ws-orbit1
 mkdir /etc/funny/cache/socks5
 clear
-bash <(curl -Ls https://github.com/NETWORKTWEAKER/SCRIPTS/raw/main/domain-set.sh)
+bash <(curl -Ls https://github.com/MRJ-Badshah/internet/raw/main/domain-set.sh)
 clear
 }
 
 run_tools() {
 #update
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+ln -fs /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 apt update -y
