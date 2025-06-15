@@ -20,8 +20,8 @@ read -rp "Input 1 or 2: " dns
 if [ "$dns" -eq 1 ]; then
     # Download cf script and convert line endings
     wget https://raw.githubusercontent.com/MRJ-Badshah/internet/master/c-domain
-    dos2unix cf
-    bash cf
+    dos2unix c-domain
+    bash c-domain
 elif [ "$dns" -eq 2 ]; then
     # Prompt for custom domain and save it to various files
     read -rp "Enter Your Domain: " dom
