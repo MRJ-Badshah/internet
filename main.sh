@@ -219,7 +219,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf https://github.com/lalfulsk/NT-A.I.O/raw/main/nginx/nginx.conf
 wget -O /etc/nginx/fn.conf https://github.com/lalfulsk/NT-A.I.O/raw/main/nginx/fn.conf
-wget -O /etc/nginx/conf.d/funnvpn.conf https://raw.githubusercontent.com/Rerechan02/last/main/funnvpn.conf
+wget -O /etc/nginx/conf.d/funnvpn.conf https://raw.githubusercontent.com/MRJ-Badshah/internet/refs/heads/main/xray_nginx.conf
 sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/funnvpn.conf
 wget -O /var/www/html/index.html https://github.com/Rerechan02/Rerechan02.github.io/raw/main/index.html
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
@@ -416,10 +416,10 @@ wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
 rm acme.sh
 cd .acme.sh
-bash acme.sh --register-account -m rere@rerechan02.com
+bash acme.sh --register-account -m illegalhacker2.0@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
-wget -O /etc/xray/config.json https://raw.githubusercontent.com/Rerechan02/last/main/config.json
+wget -O /etc/xray/config.json https://github.com/MRJ-Badshah/internet/blob/raw/xray_config.json
 
 #ssl
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/funny.pem
@@ -427,8 +427,8 @@ cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/funny.pem
 # / / Installation Xray Service
 cat > /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray by FunnyVPN
-Documentation=https://indo-ssh.com
+Description=Xray by MRJ
+Documentation=https://t.me/mrjkingdom
 After=network.target nss-lookup.target
 
 [Service]
@@ -527,7 +527,7 @@ echo -e "Change VPS login port from 22 to 3303"
 echo -e "because logging into VPS using port 22 is prone to brute force attacks"
 echo -e ""
 echo -e "To access the Kingdom VPN panel, enter"
-echo -e "the command ( menu ) without parentheses"
+echo -e "the command ( menu/kingdom/panel ) without parentheses"
 echo -e ""
 read -p "Press enter to reboot: " ieieie
 touch /root/system
