@@ -219,7 +219,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf https://github.com/lalfulsk/NT-A.I.O/raw/main/nginx/nginx.conf
 wget -O /etc/nginx/fn.conf https://github.com/lalfulsk/NT-A.I.O/raw/main/nginx/fn.conf
-wget -O /etc/nginx/conf.d/funnvpn.conf https://raw.githubusercontent.com/MRJ-Badshah/internet/refs/heads/main/xray_nginx.conf
+wget -O /etc/nginx/conf.d/funnvpn.conf https://github.com/MRJ-Badshah/internet/raw/main/xray_nginx.conf
 sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/funnvpn.conf
 wget -O /var/www/html/index.html https://github.com/Rerechan02/Rerechan02.github.io/raw/main/index.html
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
@@ -342,20 +342,20 @@ apt autoremove -y
 # finishing
 rm -fr /etc/issue.net
 cat> /etc/issue.net << END
-<b>
-<span style="color: green">╔════════ ≪ ◍❈◍ ≫ ════════╗</span>
-<span style="color: yellow"><br><pre><span style="color: green">┆</span>     <u style="text-decoration-style: dashed;text-decoration-color: #00ff00;">Kingdom Server (Public)</u>     <span style="color: green">┆</span></pre></span>
-<span style="color: green">╚════════ ≪ ◍❈◍ ≫ ════════╝</span>
+<b><br>
+<span style="color: green">╔══════ ≪ ◍❈◍ ≫ ══════╗</span>
+<span style="color: yellow"><br><pre><span style="color: green">┆</span>     <u style="text-decoration-style: dashed;text-decoration-color: #00ff00;">Kingdom Server (Public)</u>     <span style="color: green">┆</span></pre></span><br>
+<span style="color: green">╚══════ ≪ ◍❈◍ ≫ ══════╝</span>
 <br>
 <br><br>
-<span style="color: green">⋅⊰─────────༺۵༻─────────⊱⋅</span>
+<span style="color: green">⋅⊰───────༺۵༻───────⊱⋅</span>
 <span style="color: red"><br>➲ No DDOS</span>
 <span style="color: blue"><br>➲ No Mining</span>
 <span style="color: green"><br>➲ No Hacking</span>
 <span style="color: orange"><br>➲ No Torrent</span>
-<span style="color: #00ff00"><br>➲ Join us for upcoming updates @mrjkingdom</span>
+<span style="color: #00ff00"><br>➲ Join @mrjkingdom</span>
 <br>
-<span style="color: green">⋅⊰─────────༺۵༻─────────⊱⋅</span>
+<span style="color: green">⋅⊰───────༺۵༻───────⊱⋅</span>
 <br><br>
 <span style="color: #e19d00fb">╭┈─────────── ೄྀ࿐ <br>
 ┆</span> <span style="color: yellow">❝ <a href="https://t.me/mrjkingdom" style="text-decoration: none; color: yellow">Team Kingdom 亗 ✓</a><br></span>
@@ -419,7 +419,7 @@ cd .acme.sh
 bash acme.sh --register-account -m illegalhacker2.0@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
-wget -O /etc/xray/config.json https://github.com/MRJ-Badshah/internet/blob/raw/xray_config.json
+wget -O /etc/xray/config.json https://github.com/MRJ-Badshah/internet/raw/main/xray_config.json
 
 #ssl
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/funny.pem
@@ -474,10 +474,10 @@ OS=$(lsb_release -si)
 if [ "$OS" = "Ubuntu" ]; then
     VERSION=$(lsb_release -sr)
     if [ "$VERSION" = "20.04" ]; then
-        echo "Menggunakan snap untuk instalasi gotop di Ubuntu 20.04"
+        echo "Installing gotop for Ubuntu 20.04"
         snap install gotop
     else
-        echo "Versi Ubuntu yang berbeda. Anda perlu menginstal gotop secara manual."
+        echo "Manual gotop installation"
     fi
 else
     echo "Bukan Ubuntu. Menggunakan apt untuk instalasi gotop."
